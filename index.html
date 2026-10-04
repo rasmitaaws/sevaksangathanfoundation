@@ -53,6 +53,53 @@
       </div>
     </section>
 
+
+    <section id="gallery" class="section gallery-section">
+      <div class="container">
+        <div class="section-heading center">
+          <div class="eyebrow">OUR WORK IN ACTION</div>
+          <h2>Real moments. <em>Real service.</em></h2>
+          <p>Our community work, celebrations and service activities — captured in photographs from the field.</p>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-image-wrap">
+            <div class="gallery-track" aria-live="polite">
+              <img class="gallery-slide active" src="assets/WhatsApp Image 2026-10-04 at 16.07.31.jpeg" alt="Sevak Sangathan Foundation community activity photo 1">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.07.32 (1).jpeg" alt="Sevak Sangathan Foundation community activity photo 2">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.07.32 (2).jpeg" alt="Sevak Sangathan Foundation community activity photo 3">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.07.32.jpeg" alt="Sevak Sangathan Foundation community activity photo 4">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.07.33 (1).jpeg" alt="Sevak Sangathan Foundation community activity photo 5">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.07.33.jpeg" alt="Sevak Sangathan Foundation community activity photo 6">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.07.45 (1).jpeg" alt="Sevak Sangathan Foundation community activity photo 7">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.07.45 (2).jpeg" alt="Sevak Sangathan Foundation community activity photo 8">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.07.45.jpeg" alt="Sevak Sangathan Foundation community activity photo 9">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.07.46.jpeg" alt="Sevak Sangathan Foundation community activity photo 10">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.07.59 (1).jpeg" alt="Sevak Sangathan Foundation community activity photo 11">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.07.59 (2).jpeg" alt="Sevak Sangathan Foundation community activity photo 12">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.07.59.jpeg" alt="Sevak Sangathan Foundation community activity photo 13">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.08.00.jpeg" alt="Sevak Sangathan Foundation community activity photo 14">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.08.02 (1).jpeg" alt="Sevak Sangathan Foundation community activity photo 15">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.08.02 (2).jpeg" alt="Sevak Sangathan Foundation community activity photo 16">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.08.02.jpeg" alt="Sevak Sangathan Foundation community activity photo 17">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.08.03 (1).jpeg" alt="Sevak Sangathan Foundation community activity photo 18">
+              <img class="gallery-slide" src="assets/WhatsApp Image 2026-10-04 at 16.08.03.jpeg" alt="Sevak Sangathan Foundation community activity photo 19">
+            </div>
+            <button class="gallery-arrow prev" type="button" aria-label="Previous photo">‹</button>
+            <button class="gallery-arrow next" type="button" aria-label="Next photo">›</button>
+            <div class="gallery-counter"><span id="galleryCurrent">1</span> / 19</div>
+          </div>
+          <div class="gallery-meta">
+            <div>
+              <strong>Our community activities</strong>
+              <p>All 19 uploaded photographs are shown here, with automatic sliding, arrows and mobile-friendly controls.</p>
+            </div>
+            <div class="gallery-badge">19 REAL PHOTOS • AUTO SLIDES</div>
+          </div>
+          <div class="gallery-dots" aria-label="Gallery photo navigation"></div>
+        </div>
+      </div>
+    </section>
+
     <section class="quote-strip">
       <div class="container quote-inner"><span class="quote-mark">“</span><p>When service becomes a habit, compassion becomes a community.</p><span class="quote-mark">”</span></div>
     </section>
@@ -133,32 +180,6 @@
       </div>
     </section>
 
-    <section id="gallery" class="section gallery-section">
-      <div class="container">
-        <div class="section-heading center">
-          <div class="eyebrow">OUR WORK IN ACTION</div>
-          <h2>Real moments. <em>Real service.</em></h2>
-          <p>A visual journey through animal care, community service, environmental work and volunteer action.</p>
-        </div>
-        <div class="gallery-card">
-          <div class="gallery-image-wrap">
-            <img src="assets/ngo-gallery-slideshow.webp" alt="Slideshow of real Sevak Sangathan Foundation animal welfare and community service activities" loading="lazy">
-            <div class="gallery-overlay">
-              <span>REAL FIELD ACTIVITIES • 10 MOMENTS</span>
-              <b>Serving animals. Serving the community.</b>
-            </div>
-          </div>
-          <div class="gallery-meta">
-            <div>
-              <strong>Previous Works &amp; Community Activities</strong>
-              <p>All uploaded field photographs are presented as a professional auto-sliding gallery.</p>
-            </div>
-            <div class="gallery-badge">AUTO SLIDES • 10 PHOTOS</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="impact" class="section impact">
       <div class="container">
         <div class="section-heading center">
@@ -202,6 +223,35 @@
     menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open)});
     document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
     document.getElementById('year').textContent=new Date().getFullYear();
+    const gallerySlides=[...document.querySelectorAll('.gallery-slide')];
+    const galleryDots=document.querySelector('.gallery-dots');
+    const galleryCurrent=document.getElementById('galleryCurrent');
+    let galleryIndex=0;
+    let galleryTimer;
+
+    gallerySlides.forEach((_,i)=>{
+      const dot=document.createElement('button');
+      dot.type='button';
+      dot.className='gallery-dot'+(i===0?' active':'');
+      dot.setAttribute('aria-label','Show photo '+(i+1));
+      dot.addEventListener('click',()=>showGallery(i,true));
+      galleryDots.appendChild(dot);
+    });
+
+    function showGallery(index,manual=false){
+      galleryIndex=(index+gallerySlides.length)%gallerySlides.length;
+      gallerySlides.forEach((slide,i)=>slide.classList.toggle('active',i===galleryIndex));
+      document.querySelectorAll('.gallery-dot').forEach((dot,i)=>dot.classList.toggle('active',i===galleryIndex));
+      galleryCurrent.textContent=galleryIndex+1;
+      if(manual) restartGallery();
+    }
+    function restartGallery(){
+      clearInterval(galleryTimer);
+      galleryTimer=setInterval(()=>showGallery(galleryIndex+1),5000);
+    }
+    document.querySelector('.gallery-arrow.prev').addEventListener('click',()=>showGallery(galleryIndex-1,true));
+    document.querySelector('.gallery-arrow.next').addEventListener('click',()=>showGallery(galleryIndex+1,true));
+    restartGallery();
   </script>
 </body>
 </html>
