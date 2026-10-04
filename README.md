@@ -1,6 +1,6 @@
-# Sevak Sangathan Foundation
+# Sebhak Sangathan Foundation
 
-Official static website for Sevak Sangathan Foundation.
+Official static website for Sebhak Sangathan Foundation.
 
 ## Local preview
 
